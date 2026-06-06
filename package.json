@@ -14,7 +14,9 @@
     "test": "pnpm -r test",
     "test:e2e": "pnpm --filter demo-vite test:e2e",
     "format": "prettier --write .",
-    "scaffold": "pnpm --filter create-react-forge-kit start"
+    "scaffold": "pnpm --filter create-react-forge-kit start",
+    "build:demo": "corepack pnpm --filter demo-vite build",
+    "deploy:cloudflare": "corepack pnpm build:demo && wrangler pages deploy apps/demo-vite/dist --project-name react-forge-kit"
   },
   "devDependencies": {
     "@eslint/js": "^9.28.0",
@@ -38,7 +40,8 @@
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.33.1",
     "vite": "^6.3.5",
-    "vitest": "^3.2.1"
+    "vitest": "^3.2.1",
+    "wrangler": "^4.49.0"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,json,md,css}": [

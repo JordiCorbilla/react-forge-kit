@@ -33,6 +33,18 @@ pnpm build
 pnpm test:e2e
 ```
 
+## Cloudflare Pages
+
+The Vite demo can be deployed to Cloudflare Pages:
+
+```sh
+corepack pnpm deploy:cloudflare
+```
+
+GitHub Actions deployment is configured in `.github/workflows/cloudflare-pages.yml`. The Pages project name is `react-forge-kit`, the production branch is `main`, and the published output is `apps/demo-vite/dist`.
+
+See [Cloudflare Pages deployment](docs/cloudflare-pages.md).
+
 ## Scaffolder CLI
 
 The CLI copies focused recipes into a target folder:
