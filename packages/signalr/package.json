@@ -1,0 +1,21 @@
+{
+  "name": "@forge/signalr",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./src/index.tsx",
+  "types": "./src/index.tsx",
+  "scripts": {
+    "build": "tsc -p tsconfig.json --noEmit",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@microsoft/signalr": "^8.0.7",
+    "react": "^19.1.0"
+  },
+  "devDependencies": {
+    "typescript": "workspace:*",
+    "vitest": "workspace:*"
+  }
+}

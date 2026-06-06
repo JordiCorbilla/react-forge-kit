@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "@forge/api": ["./packages/api/src/index.ts"],
+      "@forge/query": ["./packages/query/src/index.tsx"],
+      "@forge/state": ["./packages/state/src/index.ts"],
+      "@forge/signalr": ["./packages/signalr/src/index.tsx"],
+      "@forge/ui": ["./packages/ui/src/index.tsx"],
+      "@forge/grid": ["./packages/grid/src/index.tsx"],
+      "@forge/notifications": ["./packages/notifications/src/index.tsx"],
+      "@forge/utils": ["./packages/utils/src/index.ts"]
+    }
+  }
+}

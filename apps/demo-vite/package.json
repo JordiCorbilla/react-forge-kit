@@ -1,0 +1,38 @@
+{
+  "name": "demo-vite",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -p tsconfig.json --noEmit && vite build",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@forge/api": "workspace:*",
+    "@forge/grid": "workspace:*",
+    "@forge/notifications": "workspace:*",
+    "@forge/query": "workspace:*",
+    "@forge/signalr": "workspace:*",
+    "@forge/state": "workspace:*",
+    "@forge/ui": "workspace:*",
+    "@forge/utils": "workspace:*",
+    "@tanstack/react-query": "^5.80.6",
+    "@tanstack/react-router": "^1.120.10",
+    "ag-grid-community": "^33.3.2",
+    "ag-grid-react": "^33.3.2",
+    "lucide-react": "^0.511.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "workspace:*",
+    "@vitejs/plugin-react": "workspace:*",
+    "typescript": "workspace:*",
+    "vite": "workspace:*",
+    "vitest": "workspace:*"
+  }
+}
