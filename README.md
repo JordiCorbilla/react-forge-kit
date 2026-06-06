@@ -81,12 +81,13 @@ docs                   Architecture notes, recipes, and decision records
 
 ## Screenshots
 
-Screenshots should be refreshed after meaningful visual changes:
+![Dashboard](docs/screenshots/dashboard.png)
 
-- `docs/screenshots/dashboard.png`
-- `docs/screenshots/products.png`
-- `docs/screenshots/jobs.png`
-- `docs/screenshots/grid.png`
+![Products](docs/screenshots/products.png)
+
+![Jobs](docs/screenshots/jobs.png)
+
+![Grid](docs/screenshots/grid.png)
 
 ## State Ownership
 

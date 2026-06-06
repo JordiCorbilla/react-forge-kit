@@ -14,7 +14,7 @@
     "zustand": "^5.0.5"
   },
   "devDependencies": {
-    "typescript": "workspace:*",
-    "vitest": "workspace:*"
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.1"
   }
 }

@@ -10,6 +10,7 @@ export function ProductsPage() {
   const navigate = useNavigate();
   const filters = parseProductFilters(new URLSearchParams(window.location.search));
   const products = useProductsQuery(filters);
+  const productPage = products.data;
   const updateStatus = useUpdateProductStatusMutation();
   const { selectedProductIds, setSelectedProductIds } = useProductSelectionStore();
 
@@ -64,7 +65,7 @@ export function ProductsPage() {
           </div>
         ) : products.isError ? (
           <ErrorState title="Products could not be loaded" />
-        ) : products.data.items.length === 0 ? (
+        ) : !productPage || productPage.items.length === 0 ? (
           <EmptyState title="No products found" description="Adjust the URL filters or clear search." />
         ) : (
           <div className="overflow-hidden rounded-lg border border-slate-200">
@@ -80,7 +81,7 @@ export function ProductsPage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-200">
-                {products.data.items.map((product) => (
+                {productPage.items.map((product) => (
                   <tr key={product.id} className="bg-white">
                     <td className="px-3 py-2">
                       <input

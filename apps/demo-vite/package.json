@@ -4,11 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --host 127.0.0.1",
+    "dev": "vite --host 127.0.0.1 --port 5174 --strictPort",
     "build": "tsc -p tsconfig.json --noEmit && vite build",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "lint": "eslint .",
-    "test": "vitest run",
+    "test": "vitest run --passWithNoTests --exclude e2e/**",
     "test:e2e": "playwright test"
   },
   "dependencies": {
@@ -29,10 +29,10 @@
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@playwright/test": "workspace:*",
-    "@vitejs/plugin-react": "workspace:*",
-    "typescript": "workspace:*",
-    "vite": "workspace:*",
-    "vitest": "workspace:*"
+    "@playwright/test": "^1.52.0",
+    "@vitejs/plugin-react": "^4.5.1",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vitest": "^3.2.1"
   }
 }
