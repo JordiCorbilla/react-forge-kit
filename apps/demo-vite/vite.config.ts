@@ -8,7 +8,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5174,
-    strictPort: true
+    strictPort: true,
+    allowedHosts: [".trycloudflare.com"]
   },
   build: {
     chunkSizeWarningLimit: 1500

@@ -45,6 +45,17 @@ GitHub Actions deployment is configured in `.github/workflows/cloudflare-pages.y
 
 See [Cloudflare Pages deployment](docs/cloudflare-pages.md).
 
+## Temporary Cloudflare Tunnel
+
+For a quick public URL from a local dev server:
+
+```sh
+corepack pnpm dev:lan
+cloudflared tunnel --url http://127.0.0.1:5174
+```
+
+See [Cloudflare Tunnel preview](docs/cloudflare-tunnel.md).
+
 ## Scaffolder CLI
 
 The CLI copies focused recipes into a target folder:

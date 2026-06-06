@@ -8,6 +8,8 @@
   "packageManager": "pnpm@9.15.4",
   "scripts": {
     "dev": "pnpm --filter demo-vite dev",
+    "dev:lan": "corepack pnpm --filter demo-vite dev:lan",
+    "tunnel": "cloudflared tunnel --url http://127.0.0.1:5174",
     "build": "pnpm -r build",
     "typecheck": "pnpm -r typecheck",
     "lint": "pnpm -r lint",
