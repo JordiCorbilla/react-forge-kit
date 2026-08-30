@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI Review"
+  short_description: "Review UI quality and consistency"
+  default_prompt: "Use this skill to review the current UI and report the highest-impact improvements."

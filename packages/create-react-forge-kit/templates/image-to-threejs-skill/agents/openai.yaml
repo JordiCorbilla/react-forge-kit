@@ -1,0 +1,4 @@
+interface:
+  display_name: "Image to Three.js"
+  short_description: "Turn reference images into editable Three.js scenes"
+  default_prompt: "Use this skill to build or improve a Three.js scene from a reference image."

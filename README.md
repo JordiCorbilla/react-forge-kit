@@ -67,6 +67,10 @@ pnpm scaffold ui-package ./scratch/ui-package
 pnpm scaffold ag-grid-page ./scratch/ag-grid-page
 pnpm scaffold signalr-client ./scratch/signalr-client
 pnpm scaffold tanstack-query-api-layer ./scratch/query-layer
+pnpm scaffold ui-design-skill ./scratch/skills/ui-design
+pnpm scaffold ui-review-skill ./scratch/skills/ui-review
+pnpm scaffold image-to-threejs-skill ./scratch/skills/image-to-threejs
+pnpm scaffold design-system ./scratch/DESIGN.md
 ```
 
 The available generators are:
@@ -77,6 +81,16 @@ The available generators are:
 - `ag-grid-page`
 - `signalr-client`
 - `tanstack-query-api-layer`
+- `ui-design-skill`
+- `ui-review-skill`
+- `image-to-threejs-skill`
+- `design-system`
+
+## Shareable UI Skills
+
+The repository includes focused, uploadable skills for building and reviewing product interfaces, plus an optional reference-image-to-Three.js workflow. The skills are kept separate from the app code so they can be uploaded or copied into another project without bringing along the whole toolkit.
+
+See [Shareable UI skills](docs/skills.md) for installation guidance, example prompts, and the relationship between a skill and a project-level `DESIGN.md` file.
 
 ## Repository Layout
 
@@ -114,12 +128,12 @@ docs                   Architecture notes, recipes, and decision records
 
 ## State Ownership
 
-| State type | Owner | Examples |
-| --- | --- | --- |
-| Server state | TanStack Query | Products, jobs, mutation results, invalidation |
-| Local UI state | Zustand | Sidebar, selected rows, density, recently viewed ids |
-| URL state | Router/search params | Search, filters, page number, product id |
-| Ephemeral state | Component state | Open menus, draft input, temporary UI toggles |
+| State type      | Owner                | Examples                                             |
+| --------------- | -------------------- | ---------------------------------------------------- |
+| Server state    | TanStack Query       | Products, jobs, mutation results, invalidation       |
+| Local UI state  | Zustand              | Sidebar, selected rows, density, recently viewed ids |
+| URL state       | Router/search params | Search, filters, page number, product id             |
+| Ephemeral state | Component state      | Open menus, draft input, temporary UI toggles        |
 
 I avoid Redux unless an example genuinely needs event-sourced client workflows. For this repo, TanStack Query, Zustand, and URL state cover the useful cases with less ceremony.
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI Design"
+  short_description: "Build distinctive, product-specific interfaces"
+  default_prompt: "Use this skill to design or improve a UI in this project."

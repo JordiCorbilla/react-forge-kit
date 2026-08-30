@@ -8,3 +8,4 @@ test-results
 !.env.example
 *.tsbuildinfo
 .tools/
+.tmp-scaffold-check*/
